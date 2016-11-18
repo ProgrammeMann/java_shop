@@ -1,0 +1,52 @@
+29379  2016-11-18 16:15:04,648 TRACE           tatar.tourism.mail.EmailSender  - The message to be sent:<html>
+<body>
+Hi 1,
+<br>
+You have registered to our app. Please don't forget your password <p style='color:green;'>123456</p>
+<br>
+To confirm your account please follow <a href="http://localhost:8090/tourismapp/confirm?uuid=fddc676b-33ed-4d39-9442-c41b6c902589">the link</a>
+<br>
+Regards, Tatarstan Tourism team<br/>
+</body>
+</html>
+29401  2016-11-18 16:15:04,670 TRACE              tatar.tourism.mail.MailUtil  - App is executed in folder /home/programmemann/IdeaProjects/Semestr/vazilon
+29402  2016-11-18 16:15:04,671 TRACE              tatar.tourism.mail.MailUtil  - Properties are located at /home/programmemann/IdeaProjects/Semestr/vazilon/target/vazilon/WEB-INF/classes/emailconfig.properties
+29402  2016-11-18 16:15:04,671 TRACE              tatar.tourism.mail.MailUtil  - Getting properties
+29437  2016-11-18 16:15:04,706 TRACE              tatar.tourism.mail.MailUtil  - Setting up smtp session
+29438  2016-11-18 16:15:04,707 TRACE              tatar.tourism.mail.MailUtil  - Formatting the new message
+29501  2016-11-18 16:15:04,770 TRACE              tatar.tourism.mail.MailUtil  - Sending message
+33541  2016-11-18 16:15:08,810 TRACE              tatar.tourism.mail.MailUtil  - Message successfully sent
+47033  2016-11-18 16:39:24,177 TRACE           tatar.tourism.mail.EmailSender  - The message to be sent:<html>
+<body>
+Hi 3,
+<br>
+You have registered to our app. Please don't forget your password <p style='color:green;'>123456</p>
+<br>
+To confirm your account please follow <a href="http://localhost:8090/vazilon/confirm?uuid=813ac89b-3a73-43e9-8b82-937ce1ed1dd9">the link</a>
+<br>
+Regards, Tatarstan Tourism team<br/>
+</body>
+</html>
+47066  2016-11-18 16:39:24,210 TRACE              tatar.tourism.mail.MailUtil  - App is executed in folder /home/programmemann/IdeaProjects/Semestr/vazilon
+47066  2016-11-18 16:39:24,210 TRACE              tatar.tourism.mail.MailUtil  - Properties are located at /home/programmemann/IdeaProjects/Semestr/vazilon/target/vazilon/WEB-INF/classes/emailconfig.properties
+47066  2016-11-18 16:39:24,210 TRACE              tatar.tourism.mail.MailUtil  - Getting properties
+47091  2016-11-18 16:39:24,235 TRACE              tatar.tourism.mail.MailUtil  - Setting up smtp session
+47092  2016-11-18 16:39:24,236 TRACE              tatar.tourism.mail.MailUtil  - Formatting the new message
+47137  2016-11-18 16:39:24,281 TRACE              tatar.tourism.mail.MailUtil  - Sending message
+50205  2016-11-18 16:39:27,349 TRACE              tatar.tourism.mail.MailUtil  - Message successfully sent
+76525  2016-11-18 16:39:53,669 TRACE           tatar.tourism.mail.EmailSender  - The message to be sent:<html>
+<body>
+Hi 3,
+<br>
+You have confirmed your email. Please enjoy the website!
+<br>
+Regards, "Wolves in the woods!<br/>
+</body>
+</html>
+76526  2016-11-18 16:39:53,670 TRACE              tatar.tourism.mail.MailUtil  - App is executed in folder /home/programmemann/IdeaProjects/Semestr/vazilon
+76526  2016-11-18 16:39:53,670 TRACE              tatar.tourism.mail.MailUtil  - Properties are located at /home/programmemann/IdeaProjects/Semestr/vazilon/target/vazilon/WEB-INF/classes/emailconfig.properties
+76526  2016-11-18 16:39:53,670 TRACE              tatar.tourism.mail.MailUtil  - Getting properties
+76530  2016-11-18 16:39:53,674 TRACE              tatar.tourism.mail.MailUtil  - Setting up smtp session
+76530  2016-11-18 16:39:53,674 TRACE              tatar.tourism.mail.MailUtil  - Formatting the new message
+76531  2016-11-18 16:39:53,675 TRACE              tatar.tourism.mail.MailUtil  - Sending message
+77850  2016-11-18 16:39:54,994 TRACE              tatar.tourism.mail.MailUtil  - Message successfully sent
