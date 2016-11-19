@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Logger;
-//TODO: исправить это говнеецо
 /**
  * Created by programmemann on 26.10.16.
  */

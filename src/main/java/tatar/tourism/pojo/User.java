@@ -56,21 +56,21 @@ import java.security.NoSuchAlgorithmException;
 
     public void setPassword(String password) //throws UnsupportedEncodingException, NoSuchAlgorithmException
     {
-
-        MessageDigest md = null;
-        try {
-            md = MessageDigest.getInstance("MD5");
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        md.update(password.getBytes());
-        byte byteData[] = md.digest();
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < byteData.length; i++)
-            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
-        this.passwordHash = sb.toString();
+//
+//        MessageDigest md = null;
+//        try {
+//            md = MessageDigest.getInstance("MD5");
+//        } catch (NoSuchAlgorithmException e) {
+//            e.printStackTrace();
+//        }
+//        md.update(password.getBytes());
+//        byte byteData[] = md.digest();
+//        StringBuffer sb = new StringBuffer();
+//        for (int i = 0; i < byteData.length; i++)
+//            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+//        this.passwordHash = sb.toString();
 //        TODO:Доделать мд5!
-        this.passwordHash=password;
+       this.passwordHash=password;
     }
 
     public void setPasswordHash(String passwordHash) {

@@ -29,7 +29,6 @@ public class LoginServlet extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");
         String username = req.getParameter("j_username");
         String password = req.getParameter("j_password");
-        System.out.println("ALALALA"+password);
 
 //        TODO:проверка через md5:
 //        MessageDigest md = null;
@@ -43,8 +42,8 @@ public class LoginServlet extends HttpServlet {
 //        StringBuffer sb = new StringBuffer();
 //        for (int i = 0; i < byteData.length; i++)
 //            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
-//        password = sb.toString();
-//        System.out.println("lolololololo"+password);
+//        password= sb.toString();
+//        System.out.println("PASSWORD = "+password);
 
         String referer = req.getHeader("Referer");
 
