@@ -50,11 +50,6 @@
 
 <body>
 
-<!--
-<nav class="navbar navbar-inverse">
-
-</nav>-->
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div>
         <div class="container-fluid">
@@ -64,19 +59,6 @@
 
                 </ul>
             </div>
-            <!--</div>-->
-
-            <!--<div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar">1</span>
-                    <span class="icon-bar">2</span>
-                    <span class="icon-bar">3</span>
-                </button>
-
-            </div>-->
-            <!--<div id="navbar" class="navbar-collapse collapse">-->
             <c:if test="${user!=null}">
                 <script type="application/javascript">
                     var Chat = {};
@@ -89,17 +71,10 @@
                         } else if ('MozWebSocket' in window) {
                             Chat.socket = new MozWebSocket(host);
                         } else {
-                            //Console.log('Error: WebSocket is not supported by this browser.');
                             return;
                         }
 
                         Chat.socket.onopen = function () {
-                            //Console.log('Info: WebSocket connection opened.');
-                            //document.getElementById('chat').onkeydown = function (event) {
-                            //    if (event.keyCode == 13) {
-                            //        Chat.sendMessage();
-                            //    }
-                            //};
                         };
 
                         Chat.socket.onclose = function () {
@@ -117,31 +92,8 @@
                                         from: "bottom",
                                         align: "left"
                                     },
-                                   // ele: 'body', // which element to append to
-                                   // type: 'info', // (null, 'info', 'danger', 'success')
-                                   // offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-                                   // align: 'right', // ('left', 'right', or 'center')
-                                   // width: 250, // (integer, or 'auto')
-                                    delay: 100000 // Time while the message will be displayed. It's not equivalent to the *demo* timeOut!
-                                   // allow_dismiss: true, // If true then will display a cross to close the popup.
-                                   // stackup_spacing: 10 // spacing between consecutively stacked growls.
-                                    //delay: 10000
                                 });
                             });
-                            /*
-                            $.bootstrapGrowl(, {
-                                ele: 'body', // which element to append to
-                                type: 'info', // (null, 'info', 'danger', 'success')
-                                offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-                                align: 'right', // ('left', 'right', or 'center')
-                                width: 250, // (integer, or 'auto')
-                                delay: 10000, // Time while the message will be displayed. It's not equivalent to the *demo* timeOut!
-                                allow_dismiss: true, // If true then will display a cross to close the popup.
-                                stackup_spacing: 10 // spacing between consecutively stacked growls.
-
-                            })
-                            ;
-                            */
                         };
                     });
 
@@ -161,25 +113,10 @@
                         }
                     });
 
-                    /*var Console = {};
-
-                     Console.log = (function (message) {
-                     var console = document.getElementById('console');
-                     var p = document.createElement('p');
-                     p.style.wordWrap = 'break-word';
-                     p.innerHTML = message;
-                     console.appendChild(p);
-                     while (console.childNodes.length > 25) {
-                     console.removeChild(console.firstChild);
-                     }
-                     console.scrollTop = console.scrollHeight;
-                     });
-                     */
                     Chat.initialize();
 
 
                     document.addEventListener("DOMContentLoaded", function () {
-                        // Remove elements with "noscript" class - <noscript> is not allowed in XHTML
                         var noscripts = document.getElementsByClassName("noscript");
                         for (var i = 0; i < noscripts.length; i++) {
                             noscripts[i].parentNode.removeChild(noscripts[i]);
@@ -252,7 +189,6 @@
 
             <p><a class="btn btn-default" href="/vazilon/goods" role="button">Перейти &raquo;</a></p>
         </div>
-        <!-- Сделать страницу с контактами и адресами, мб даже гугл карту-->
         <div class="col-md-4">
             <h2>Контакты</h2>
 
@@ -275,7 +211,6 @@
         <p>&copy; Tourist shop 2016</p>
         <script>
             $(function () {
-                //setting up Datapicker internationalization + defaults
                 $.datepicker.setDefaults(
                         $.extend($.datepicker.regional["${language}"]));
                 $(".datepicker").datepicker({
@@ -291,7 +226,6 @@
                     $(btn).attr("disabled", "true");
                 });
             });
-            // disabling form's Submit buttons after the submit
         </script>
     </footer>
 </div>

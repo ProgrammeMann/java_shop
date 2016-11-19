@@ -10,7 +10,7 @@ import java.util.Map;
  * Created by programmemann on 10.11.16.
  */
 public class Basket {
-    //TODO: исправить добавление товара несколько раз (как разные элементы)
+    //TODO:если будет время, то изменить добавление товара несколько раз
     //Либо оставить количество товаров всегда 1 (делаем Set)
     //Либо Map <Integer, Goods> - где Integer - кол-во товаров
     private List<Integer> goods;

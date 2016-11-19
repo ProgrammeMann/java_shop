@@ -26,7 +26,6 @@
             <form action="users" method="post">
             <td>${user.username}</td>
             <td>
-                <%--TODO: взять отсюда фильтр для админа!!!!!!!--%>
                 <input type="hidden" value="${user.databaseId}" name="dbId">
                 <c:if test="${sessionUser.isAdmin()}">
                     <select name="role">

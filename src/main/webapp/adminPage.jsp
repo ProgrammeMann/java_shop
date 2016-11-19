@@ -17,8 +17,6 @@
     <title>Admin</title>
 </head>
 <body>
-<%--TODO: Понять почему не работет фильтр для админа--%>
-<%--<c:if test="${sessionUser.isAdmin()}">--%>
 <table class="table table-bordered table-striped">
     <tr>
         <th><fmt:message key="goods.label.id_goods" /></th>
@@ -100,7 +98,5 @@
 
     </tr>
     </table>
-
-<%--</c:if>--%>
 </body>
 </html>
