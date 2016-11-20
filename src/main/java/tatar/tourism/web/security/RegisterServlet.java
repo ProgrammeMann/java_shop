@@ -17,6 +17,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
 
 /**
@@ -40,7 +42,7 @@ public class RegisterServlet extends HttpServlet {
         newUser.setFirstname(req.getParameter("firstname"));
         newUser.setLastname(req.getParameter("lastname"));
         //try {
-            newUser.setPassword(req.getParameter("password"));
+            newUser.setPassword(passwordInHash(req.getParameter("password")));
             log.debug("Calculating and setting password for the user");
         //} catch (NoSuchAlgorithmException e) {
         //    log.error("MD5 algorithm not fount");
@@ -96,5 +98,20 @@ public class RegisterServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/register.jsp").forward(req, resp);
+    }
+//md5
+    private String passwordInHash(String password){
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("MD5");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        md.update(password.getBytes());
+        byte byteData[] = md.digest();
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < byteData.length; i++)
+            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+        return sb.toString();
     }
 }

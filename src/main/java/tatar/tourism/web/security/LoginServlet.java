@@ -28,23 +28,7 @@ public class LoginServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html;charset=UTF-8");
         String username = req.getParameter("j_username");
-        String password = req.getParameter("j_password");
-
-//        TODO:проверка через md5:
-//        MessageDigest md = null;
-//        try {
-//            md = MessageDigest.getInstance("MD5");
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//        }
-//        md.update(password.getBytes());
-//        byte byteData[] = md.digest();
-//        StringBuffer sb = new StringBuffer();
-//        for (int i = 0; i < byteData.length; i++)
-//            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
-//        password= sb.toString();
-//        System.out.println("PASSWORD = "+password);
-
+        String password = passwordInHash(req.getParameter("j_password"));
         String referer = req.getHeader("Referer");
 
         if (username != null) {
@@ -94,5 +78,20 @@ public class LoginServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         processRequest(req, resp);
+    }
+//md5
+    private String passwordInHash(String password){
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("MD5");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        md.update(password.getBytes());
+        byte byteData[] = md.digest();
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < byteData.length; i++)
+            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+        return sb.toString();
     }
 }
