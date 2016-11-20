@@ -79,13 +79,6 @@ public class MySQLAdminPageDao extends MySqlDao implements AdminPageDao {
         try {
             stmt = con.prepareStatement("UPDATE shipping_records SET id_goods =  ?, adress_buer=?, phone_buyer=?, comment_buyer=?, done_delivery=? " +
                     "WHERE id_delivery =  ?");
-
-            System.out.println(adminPage.getAdress());
-            System.out.println(adminPage.getPhone());
-            System.out.println(adminPage.getId_delivery());
-            System.out.println(adminPage.getComment());
-            System.out.println(adminPage.getDone());
-
             stmt.setInt(1, adminPage.getId_goods());
             stmt.setString(2, adminPage.getAdress());
             stmt.setString(3, adminPage.getPhone());
